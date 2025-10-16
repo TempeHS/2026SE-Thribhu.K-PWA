@@ -45,5 +45,4 @@ insert into extension(extID, name, hyperlink, about, image, language) values (
     "SQL"
 );
 
-select * from extension where name like "#BASH"
-
+select * from extension
