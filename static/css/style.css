@@ -134,3 +134,10 @@ nav h1 {
   text-align: justify;
   text-justify: inter-word;
 }
+
+.error_message {
+  max-width: 900px;
+  margin: auto;
+  padding: 0.5rem;
+  text-align: center;
+}

@@ -1,0 +1,35 @@
+{% extends 'layout.html' %} {% block content %}
+<div>
+  {% if is_done %}
+  <img src="/static/images/zuck.png" style="width: 50%; height: auto" />
+  <h1>I will be in contact soon</h1>
+  {% else %}
+  <form action="/add.html" method="POST" class="box">
+    {% if err %}
+    <div>
+      <p class="error_message">Error: {{ errmsg }}</p>
+    </div>
+    {% endif %}
+    <div>
+      <label class="form-label">Email address</label>
+      <input
+        name="email"
+        type="email"
+        class="form-control"
+        id="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
+        placeholder="name@example.com"
+      />
+    </div>
+    <div>
+      <label class="form-label">Name</label>
+      <textarea class="form-control" name="name" id="name" rows="1"></textarea>
+    </div>
+    <br />
+    <div>
+      <button type="submit" class="btn">Submit</button>
+    </div>
+  </form>
+  {% endif %}
+</div>
+{% endblock %}

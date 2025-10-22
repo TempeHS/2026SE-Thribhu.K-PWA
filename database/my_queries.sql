@@ -45,4 +45,10 @@ insert into extension(extID, name, hyperlink, about, image, language) values (
     "SQL"
 );
 
-select * from extension
+select * from extension;
+
+create table contact_list(
+    id integer not null primary key,
+    email text not null unique,
+    name text not null unique
+);
